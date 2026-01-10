@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>價格方案 - LINE 貼圖工作室</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">🎨 LINE 貼圖工作室</div>
+            <ul class="nav-menu">
+                <li><a href="{{ url_for('index') }}">首頁</a></li>
+                <li><a href="{{ url_for('vip') }}">VIP 客製化</a></li>
+                <li><a href="{{ url_for('pricing') }}" class="active">價格方案</a></li>
+                <li><a href="{{ url_for('contact') }}">聯絡我們</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>💰 價格方案</h1>
+            <p>透明公開的收費標準，選擇最適合您的方案</p>
+        </div>
+    </section>
+
+    <section class="pricing-section">
+        <div class="container">
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="plan-header">
+                        <h3>基礎方案</h3>
+                        <div class="price">
+                            <span class="currency">NT$</span>
+                            <span class="amount">3,000</span>
+                        </div>
+                        <p class="plan-desc">適合個人使用</p>
+                    </div>
+                    <ul class="plan-features">
+                        <li>✓ 8張貼圖設計</li>
+                        <li>✓ 2次修改機會</li>
+                        <li>✓ 基本風格選擇</li>
+                        <li>✓ 14天交付</li>
+                        <li>✓ PNG高解析度檔案</li>
+                    </ul>
+                    <a href="{{ url_for('contact') }}" class="btn btn-outline">選擇方案</a>
+                </div>
+
+                <div class="pricing-card featured">
+                    <div class="badge">熱門</div>
+                    <div class="plan-header">
+                        <h3>進階方案</h3>
+                        <div class="price">
+                            <span class="currency">NT$</span>
+                            <span class="amount">5,500</span>
+                        </div>
+                        <p class="plan-desc">最受歡迎的選擇</p>
+                    </div>
+                    <ul class="plan-features">
+                        <li>✓ 16張貼圖設計</li>
+                        <li>✓ 5次修改機會</li>
+                        <li>✓ 多種風格選擇</li>
+                        <li>✓ 10天交付</li>
+                        <li>✓ PNG+PSD原始檔</li>
+                        <li>✓ 動態貼圖選項</li>
+                    </ul>
+                    <a href="{{ url_for('contact') }}" class="btn btn-primary">選擇方案</a>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="plan-header">
+                        <h3>VIP 客製化</h3>
+                        <div class="price">
+                            <span class="currency">NT$</span>
+                            <span class="amount">9,800</span>
+                            <span class="up">起</span>
+                        </div>
+                        <p class="plan-desc">完全客製化服務</p>
+                    </div>
+                    <ul class="plan-features">
+                        <li>✓ 24張以上貼圖</li>
+                        <li>✓ 無限次修改</li>
+                        <li>✓ 專屬設計師</li>
+                        <li>✓ 7天快速交付</li>
+                        <li>✓ 完整版權轉讓</li>
+                        <li>✓ 上架協助服務</li>
+                        <li>✓ 一年免費更新</li>
+                    </ul>
+                    <a href="{{ url_for('contact') }}" class="btn btn-outline">立即諮詢</a>
+                </div>
+            </div>
+
+            <div class="pricing-note">
+                <h3>💡 溫馨提示</h3>
+                <ul>
+                    <li>所有方案皆包含商業使用授權</li>
+                    <li>急件加價20%，可縮短50%交付時間</li>
+                    <li>企業大量訂購享有優惠折扣</li>
+                    <li>付款方式：銀行轉帳、信用卡、LINE Pay</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 LINE 貼圖工作室 | 專業客製化貼圖設計服務</p>
+        </div>
+    </footer>
+</body>
+
+</html>

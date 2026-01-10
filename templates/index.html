@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LINE 貼圖工作室 - 專業客製化貼圖設計</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">🎨 LINE 貼圖工作室</div>
+            <ul class="nav-menu">
+                <li><a href="{{ url_for('index') }}" class="active">首頁</a></li>
+                <li><a href="{{ url_for('vip') }}">VIP 客製化</a></li>
+                <li><a href="{{ url_for('pricing') }}">價格方案</a></li>
+                <li><a href="{{ url_for('contact') }}">聯絡我們</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title">打造專屬於您的 LINE 貼圖</h1>
+            <p class="hero-subtitle">專業設計團隊，為您量身打造獨一無二的貼圖作品</p>
+            <div class="hero-buttons">
+                <a href="{{ url_for('vip') }}" class="btn btn-primary">VIP 客製化服務</a>
+                <a href="{{ url_for('pricing') }}" class="btn btn-secondary">查看方案</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">為什麼選擇我們？</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">✨</div>
+                    <h3>專業設計</h3>
+                    <p>5年以上貼圖設計經驗，作品超過100組</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>客製化服務</h3>
+                    <p>根據您的需求量身打造，100%原創設計</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>快速交付</h3>
+                    <p>7-14天完成設計，急件可加速處理</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💎</div>
+                    <h3>品質保證</h3>
+                    <p>修改到滿意為止，提供完整版權</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio">
+        <div class="container">
+            <h2 class="section-title">精選作品</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="portfolio-placeholder">🐱</div>
+                    <p>可愛貓咪系列</p>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-placeholder">🐶</div>
+                    <p>療癒狗狗系列</p>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-placeholder">🐰</div>
+                    <p>萌兔系列</p>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-placeholder">🐻</div>
+                    <p>熊熊日常系列</p>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-placeholder">🦊</div>
+                    <p>狐狸表情包</p>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-placeholder">🐼</div>
+                    <p>熊貓搞笑系列</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>準備好打造專屬貼圖了嗎？</h2>
+            <p>立即聯絡我們，開始您的創作之旅</p>
+            <a href="{{ url_for('contact') }}" class="btn btn-primary btn-large">立即諮詢</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 LINE 貼圖工作室 | 專業客製化貼圖設計服務</p>
+        </div>
+    </footer>
+</body>
+</html>

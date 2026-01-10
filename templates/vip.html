@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIP 客製化服務 - LINE 貼圖工作室</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">🎨 LINE 貼圖工作室</div>
+            <ul class="nav-menu">
+                <li><a href="{{ url_for('index') }}">首頁</a></li>
+                <li><a href="{{ url_for('vip') }}" class="active">VIP 客製化</a></li>
+                <li><a href="{{ url_for('pricing') }}">價格方案</a></li>
+                <li><a href="{{ url_for('contact') }}">聯絡我們</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>👑 VIP 客製化服務</h1>
+            <p>專屬於您的獨一無二貼圖設計</p>
+        </div>
+    </section>
+
+    <section class="vip-content">
+        <div class="container">
+            <div class="vip-intro">
+                <h2>什麼是 VIP 客製化服務？</h2>
+                <p>我們提供一對一專屬設計服務，從概念發想到最終成品，全程由資深設計師為您量身打造。無論是個人形象、寵物、卡通角色，或是企業吉祥物，我們都能完美呈現！</p>
+            </div>
+
+            <div class="process-section">
+                <h2>服務流程</h2>
+                <div class="process-grid">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <h3>需求溝通</h3>
+                        <p>深入了解您的想法、風格偏好與使用情境</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <h3>草稿設計</h3>
+                        <p>提供3-5款初稿供您選擇與調整</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <h3>精緻化</h3>
+                        <p>根據您的反饋進行細節優化</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <h3>完稿交付</h3>
+                        <p>提供高解析度檔案與LINE上架協助</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vip-features">
+                <h2>VIP 專屬特色</h2>
+                <div class="feature-list">
+                    <div class="feature-item">
+                        <span class="check">✓</span>
+                        <div>
+                            <h4>無限次修改</h4>
+                            <p>修改到您100%滿意為止</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <span class="check">✓</span>
+                        <div>
+                            <h4>專屬設計師</h4>
+                            <p>一對一服務，隨時溝通</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <span class="check">✓</span>
+                        <div>
+                            <h4>完整版權</h4>
+                            <p>所有設計版權歸您所有</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <span class="check">✓</span>
+                        <div>
+                            <h4>上架協助</h4>
+                            <p>協助LINE貼圖上架流程</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cta-box">
+                <h3>準備好打造專屬貼圖了嗎？</h3>
+                <p>立即預約 VIP 客製化服務，讓我們為您實現創意！</p>
+                <a href="{{ url_for('contact') }}" class="btn btn-primary btn-large">立即預約</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 LINE 貼圖工作室 | 專業客製化貼圖設計服務</p>
+        </div>
+    </footer>
+</body>
+
+</html>

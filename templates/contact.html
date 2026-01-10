@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>聯絡我們 - LINE 貼圖工作室</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">🎨 LINE 貼圖工作室</div>
+            <ul class="nav-menu">
+                <li><a href="{{ url_for('index') }}">首頁</a></li>
+                <li><a href="{{ url_for('vip') }}">VIP 客製化</a></li>
+                <li><a href="{{ url_for('pricing') }}">價格方案</a></li>
+                <li><a href="{{ url_for('contact') }}" class="active">聯絡我們</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>📧 聯絡我們</h1>
+            <p>有任何問題或想法？歡迎與我們聯繫！</p>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="container">
+            {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+            {% for category, message in messages %}
+            <div class="alert alert-{{ category }}">
+                {{ message }}
+            </div>
+            {% endfor %}
+            {% endif %}
+            {% endwith %}
+
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>聯絡資訊</h2>
+                    <div class="info-item">
+                        <div class="info-icon">📧</div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>sticker@example.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">💬</div>
+                        <div>
+                            <h4>LINE 官方帳號</h4>
+                            <p>@stickerstudio</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">⏰</div>
+                        <div>
+                            <h4>服務時間</h4>
+                            <p>週一至週五 10:00-18:00</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">⚡</div>
+                        <div>
+                            <h4>回覆時間</h4>
+                            <p>24小時內回覆</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper">
+                    <h2>發送訊息</h2>
+                    <form method="POST" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">姓名 *</label>
+                            <input type="text" id="name" name="name" required placeholder="請輸入您的姓名">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required placeholder="example@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">訊息內容 *</label>
+                            <textarea id="message" name="message" rows="6" required
+                                placeholder="請告訴我們您的需求或問題..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-large">送出訊息</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 LINE 貼圖工作室 | 專業客製化貼圖設計服務</p>
+        </div>
+    </footer>
+</body>
+
+</html>
